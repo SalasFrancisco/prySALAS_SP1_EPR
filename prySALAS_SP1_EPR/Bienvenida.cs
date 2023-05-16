@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace prySALAS_SP1_EPR
 {
-    public partial class Bienvenida : Form
+    public partial class frmBienvenida : Form
     {
-        public Bienvenida()
+        public frmBienvenida()
         {
             InitializeComponent();
+        }
+
+        private void cmdAceptar_Click(object sender, EventArgs e)
+        {
+          
         }
     }
 }

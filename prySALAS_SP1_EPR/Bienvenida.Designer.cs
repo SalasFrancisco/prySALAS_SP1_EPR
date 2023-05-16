@@ -1,6 +1,6 @@
 ﻿namespace prySALAS_SP1_EPR
 {
-    partial class Bienvenida
+    partial class frmBienvenida
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
+            this.cmdAceptar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -41,13 +42,24 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Bienvenido al sistema";
             // 
-            // Bienvenida
+            // cmdAceptar
+            // 
+            this.cmdAceptar.Location = new System.Drawing.Point(216, 195);
+            this.cmdAceptar.Name = "cmdAceptar";
+            this.cmdAceptar.Size = new System.Drawing.Size(75, 23);
+            this.cmdAceptar.TabIndex = 1;
+            this.cmdAceptar.Text = "Aceptar";
+            this.cmdAceptar.UseVisualStyleBackColor = true;
+            this.cmdAceptar.Click += new System.EventHandler(this.cmdAceptar_Click);
+            // 
+            // frmBienvenida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(508, 277);
+            this.Controls.Add(this.cmdAceptar);
             this.Controls.Add(this.label1);
-            this.Name = "Bienvenida";
+            this.Name = "frmBienvenida";
             this.Text = "Bienvenida";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -57,5 +69,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button cmdAceptar;
     }
 }
