@@ -55,12 +55,16 @@
             this.mrcDatos.TabIndex = 0;
             this.mrcDatos.TabStop = false;
             this.mrcDatos.Text = "Datos";
+            this.mrcDatos.Enter += new System.EventHandler(this.mrcDatos_Enter);
             // 
             // lstModulo
             // 
             this.lstModulo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lstModulo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.lstModulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstModulo.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.lstModulo.FormattingEnabled = true;
+            this.lstModulo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.lstModulo.Items.AddRange(new object[] {
             "ADM",
             "COM",
@@ -70,6 +74,7 @@
             this.lstModulo.Name = "lstModulo";
             this.lstModulo.Size = new System.Drawing.Size(121, 28);
             this.lstModulo.TabIndex = 5;
+            this.lstModulo.SelectedIndexChanged += new System.EventHandler(this.lstModulo_SelectedIndexChanged);
             // 
             // lblModulo
             // 
@@ -83,10 +88,12 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.txtPassword.Location = new System.Drawing.Point(143, 74);
+            this.txtPassword.MaxLength = 10;
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '#';
             this.txtPassword.Size = new System.Drawing.Size(120, 26);
             this.txtPassword.TabIndex = 3;
             // 
@@ -105,6 +112,7 @@
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.txtUsuario.Location = new System.Drawing.Point(143, 25);
+            this.txtUsuario.MaxLength = 10;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(120, 26);
             this.txtUsuario.TabIndex = 1;
@@ -127,6 +135,7 @@
             this.cmdAceptar.TabIndex = 1;
             this.cmdAceptar.Text = "Aceptar";
             this.cmdAceptar.UseVisualStyleBackColor = true;
+            this.cmdAceptar.Click += new System.EventHandler(this.cmdAceptar_Click);
             // 
             // cmdCancelar
             // 
@@ -136,6 +145,7 @@
             this.cmdCancelar.TabIndex = 2;
             this.cmdCancelar.Text = "Cancelar";
             this.cmdCancelar.UseVisualStyleBackColor = true;
+            this.cmdCancelar.Click += new System.EventHandler(this.cmdCancelar_Click_1);
             // 
             // frmPrincipal
             // 
@@ -148,6 +158,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPrincipal";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.mrcDatos.ResumeLayout(false);
             this.mrcDatos.PerformLayout();
             this.ResumeLayout(false);

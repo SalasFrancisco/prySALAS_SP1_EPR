@@ -19,7 +19,12 @@ namespace prySALAS_SP1_EPR
 
         private void cmdAceptar_Click(object sender, EventArgs e)
         {
-          
+            this.Close();
+        }
+
+        private void frmBienvenida_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

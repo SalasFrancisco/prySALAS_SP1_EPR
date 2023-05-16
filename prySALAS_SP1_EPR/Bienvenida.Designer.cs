@@ -61,6 +61,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmBienvenida";
             this.Text = "Bienvenida";
+            this.Load += new System.EventHandler(this.frmBienvenida_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
